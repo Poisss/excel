@@ -1,13 +1,14 @@
 <?php
 $url = "https://newlms.magtu.ru/mod/folder/view.php?id=219208";
 $html = file_get_contents($url);
-$pattern = '/<a\s[^>]*?href=[\'"](.+?)[\'"].*?>/i';
-preg_match($pattern, $html, $matches);
-// if($matches==null){
-// echo 'f';    
+$pattern = '/<a\s[^>]*?href=[\'"]([^"]*forcedownload=1)[\'"].*?>/i';
+preg_match_all($pattern, $html, $matches);
+
+// echo '<pre>';
+// var_dump($matches);
+// echo '</pre>';
+echo $matches[1][0];
+// foreach($matches as $value){
+//     echo $value;
 // }
-echo $matches[1].'<br>';
-foreach($matches as $value){
-    echo $value;
-}
 // echo $html;
