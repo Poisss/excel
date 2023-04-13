@@ -6,5 +6,8 @@ preg_match($pattern, $html, $matches);
 // if($matches==null){
 // echo 'f';    
 // }
-
-echo $html;
+echo $matches[1].'<br>';
+foreach($matches as $value){
+    echo $value;
+}
+// echo $html;
