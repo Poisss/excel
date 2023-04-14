@@ -2,7 +2,7 @@
 require_once 'PHPExcel/Classes/PHPExcel.php';
 require_once 'PHPExcel/Classes/PHPExcel/IOFactory.php';
 // Открываем файл XLSX
-$excel = PHPExcel_IOFactory::load(__DIR__.'\dd\dd.xlsx');
+$excel = PHPExcel_IOFactory::load(__DIR__.'\dd\dd0.xlsx');
 
 $sheet = $excel->getActiveSheet();
 
